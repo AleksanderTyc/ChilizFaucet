@@ -112,7 +112,7 @@ export default function Square() {
                 error => {
                     let dtNow = new Date();
                     console.error(`Error * handleRequest * drawWithLimits * on ${dtNow}`, error);
-                    alert(`Error * handleRequest * drawWithLimits * on ${dtNow}`, error);
+                    alert(`Error * handleRequest * drawWithLimits * on ${dtNow} * ${error}`, error);
                 }
             )
             .finally(
