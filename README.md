@@ -18,6 +18,12 @@ The user is presented with a screen, where a wallet address should be inserted a
 
 The Faucet smart contract must be deployed with CHZ Spicy coin and connected to two ERC20 contracts representing test tokens. Tokens contracts must make Faucet the owner of tokens by executing transfer function. At every delivery of tokens, the Faucet contract will transfer ownership of one of its tokens to the wallet requesting the delivery.
 
+The Faucet's limits (see below) are configurable as a call to the Faucet contract's `setSupplyLimits` function. This call may also be used to provide additional funds to the contract, if required. This is owner's only functionality.
+
+The Faucet may be drained of the funds, rendering it unusable. This is owner's only functionality.
+
+The Faucet may be called to provide arbitrary amount of funds to a beneficiary, bypassing all the limits. This is owner's only functionality.
+
 ### Preventing misuse
 
 The Faucet has some built-in limitations which prevent excessive drawing:
